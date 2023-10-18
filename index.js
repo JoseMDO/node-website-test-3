@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 
 app.use(express.static(__dirname + '/client'))
-app.use(cors());
+app.use(cors({ origin: '*' }));
 
 app.get('/test', function(request, response) {
 	response.type('text/plain')
